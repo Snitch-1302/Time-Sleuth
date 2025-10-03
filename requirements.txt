@@ -1,0 +1,7 @@
+pytsk3
+python-registry
+python-evtx
+pandas
+dash
+plotly
+scikit-learn

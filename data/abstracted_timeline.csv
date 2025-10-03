@@ -1,0 +1,24 @@
+timestamp,source,action,artifact,abstracted_action
+2025-09-21 09:15:30,system,boot_event,System Boot,System Event
+2025-09-21 09:16:45,log,user_logon,Admin,User Activity
+2025-09-21 09:17:12,registry,key_create,HKCU\Software\Microsoft\Windows\CurrentVersion\Run,Registry Change
+2025-09-21 09:18:33,filesystem,file_create,C:\Users\Admin\Documents\suspicious.exe,File System Activity
+2025-09-21 09:19:45,network,connection_outbound,192.168.1.100:443,Network Activity
+2025-09-21 09:20:15,browser,download_event,malware.zip,Network Activity
+2025-09-21 09:21:30,filesystem,file_execute,C:\Users\Admin\Documents\suspicious.exe,File System Activity
+2025-09-21 09:22:18,registry,key_modify,HKLM\Software\Microsoft\Windows\CurrentVersion\Run,Registry Change
+2025-09-21 09:23:45,network,connection_inbound,10.0.0.50:8080,Network Activity
+2025-09-21 09:24:12,filesystem,file_delete,C:\Users\Admin\Documents\suspicious.exe,File System Activity
+2025-09-21 09:25:30,registry,key_access,HKCU\Software\Microsoft\Windows\CurrentVersion\Internet Settings,Registry Change
+2025-09-21 09:26:45,browser,cache_write,evil-site.com,Web Browsing
+2025-09-21 09:27:18,filesystem,file_create,C:\Windows\System32\malicious.dll,File System Activity
+2025-09-21 09:28:33,process,process_create,malware.exe,Process Activity
+2025-09-21 09:29:15,network,data_exfiltration,192.168.1.200:21,Network Activity
+2025-09-21 09:30:45,log,user_logoff,Admin,User Activity
+2025-09-21 09:31:12,filesystem,file_modify,C:\Users\Admin\Documents\passwords.txt,File System Activity
+2025-09-21 09:32:30,registry,key_delete,HKCU\Software\Microsoft\Windows\CurrentVersion\Run,Registry Change
+2025-09-21 09:33:18,filesystem,file_create,C:\Users\Admin\Desktop\ransom_note.txt,File System Activity
+2025-09-21 09:34:45,network,connection_outbound,tor-network.onion:9050,Network Activity
+2025-09-21 09:35:30,filesystem,file_encrypt,C:\Users\Admin\Documents\important.docx,File System Activity
+2025-09-21 09:36:12,process,process_terminate,malware.exe,Process Activity
+2025-09-21 09:37:45,log,system_shutdown,System Shutdown,System Event
