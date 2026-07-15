@@ -1,17 +1,25 @@
 import pytsk3
 import pandas as pd
-from utils import write_csv, normalize_timestamp
+
+# Works whether this file is run directly (python extract_events.py from
+# inside scripts/) or as a package module (python -m scripts.extract_events
+# from the repo root) -- scripts/ has an __init__.py, so it's a real
+# package, and a bare `from utils import ...` only resolves in the first
+# case.
+try:
+    from scripts.utils import write_csv, normalize_timestamp
+except ImportError:
+    from utils import write_csv, normalize_timestamp
 
 IMAGE_PATH = "data/m57-jean.dd"
 OUTPUT_PATH = "data/raw_timeline.csv"
 
+
 def extract_filesystem_events(image_path):
     img = pytsk3.Img_Info(image_path)
     fs = pytsk3.FS_Info(img)
-
     directory = fs.open_dir("/")
     events = []
-
     for entry in directory:
         if not hasattr(entry.info, "meta") or entry.info.meta is None:
             continue
@@ -28,6 +36,7 @@ def extract_filesystem_events(image_path):
                 "details": f"Filesystem event on {name} (action=file_entry)"
             })
     return events
+
 
 if __name__ == "__main__":
     events = extract_filesystem_events(IMAGE_PATH)
