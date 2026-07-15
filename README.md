@@ -5,14 +5,14 @@ visualizes system events from disk images — helping reconstruct timelines
 of user activity, spot suspicious events, and detect anomalies.
 
 ## Pipeline
-
+```
 Disk image (.dd)
-└── extract_events.py   (pytsk3 filesystem parsing)
-└── raw_timeline.csv
-└── abstraction.py   (maps raw actions → high-level categories)
-└── abstracted_timeline.csv
-└── app.py   (interactive Dash timeline UI)
-
+   └── extract_events.py   (pytsk3 filesystem parsing)
+         └── raw_timeline.csv
+               └── abstraction.py   (maps raw actions → high-level categories)
+                     └── abstracted_timeline.csv
+                           └── app.py   (interactive Dash timeline UI)
+```
 ## Features
 
 - Extracts real filesystem artifacts from disk images using `pytsk3` (The Sleuth Kit)
@@ -33,10 +33,10 @@ Disk image (.dd)
 - `scikit-learn` — DBSCAN event clustering
 
 ## Project structure
-
+```
 TimeSleuth/
 ├── app/
-│   ├── init.py
+│   ├── __init__.py
 │   ├── app.py             # Dash app: layout, callbacks, visualization
 │   └── callbacks.py        # (reserved for callback separation as the app grows)
 ├── data/
@@ -45,7 +45,7 @@ TimeSleuth/
 ├── docs/
 │   └── report.md            # forensic findings write-up template
 ├── scripts/
-│   ├── init.py
+│   ├── __init__.py
 │   ├── extract_events.py     # pytsk3-based disk image extraction
 │   ├── abstraction.py          # raw -> high-level event mapping
 │   ├── clustering.py            # DBSCAN event clustering
@@ -53,7 +53,7 @@ TimeSleuth/
 ├── .gitignore
 ├── requirements.txt
 └── README.md
-
+```
 ## Setup
 
 ```bash
