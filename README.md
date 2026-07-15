@@ -1,4 +1,4 @@
-# ⏳ TimeSleuth: Forensic Timeline Analysis
+# TimeSleuth: Forensic Timeline Analysis
 
 TimeSleuth is a digital forensics tool that extracts, abstracts, and
 visualizes system events from disk images — helping reconstruct timelines
